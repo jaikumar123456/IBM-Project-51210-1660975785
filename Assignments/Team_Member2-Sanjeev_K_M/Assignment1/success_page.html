@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Registration successful</title>
+    <title>Successful registration</title>
     <style>
         table, th, td {
             border: 1px solid black;
-            margin: auto;
-        }
-        h2{
-            text-align: center;
-            margin: auto;
         }
     </style>
 </head>
 <body>
-    <h2>User profile</h2><br/>
-    
+    <h2>Thank you for registering! Enjoy UCloud.</h2>
+    <h3>Your details</h3>
     <table >
         <tr>	
             <th colspan="4">Signup</th>
@@ -24,7 +19,10 @@
             <td><label for="name">Name</label></td>
             <td id="name"></td>
         </tr>
-        
+        <tr>
+            <td><label for="mobile">Mobile</label></td>
+            <td id="mobile"></td>
+        </tr>
         <tr>
             <td><label for="email">Email</label></td>
             <td id="email"></td>
@@ -49,7 +47,7 @@
         </tr>
        
     </table>
-</body>
+
 <script>
     window.onload = function () {
     var url = document.location.href;
@@ -57,9 +55,8 @@
         console.log(params);
     for (var i = 1, l = params.length; i < l; i++) {
          tmp = params[i].split('=');
-         tmp[1] = tmp[1].replace(/[ %20,%40,C]/g, ' ');
-         
          document.getElementById(tmp[0]).innerHTML = tmp[1];
     }
 }
 </script>
+</body>
